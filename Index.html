@@ -45,12 +45,12 @@
       	line-height: 135%;
       }
 
-
       body {
       	font-family: 'Matter-Medium', Helvetica, sans-serif;
         margin: 0;
         padding: 0;
       }
+
 
       #map {
         position: absolute;
@@ -69,7 +69,6 @@
         font-family: 'Matter', sans-serif;
       }
 
-
       #logo {
         position: fixed;
         right: 50%;
@@ -80,8 +79,6 @@
 
       #logo:hover {opacity: 0.7;}
 
-
-      /* The side navigation menu */
       .sidenav {
           height: 100%;
           width: 0;
@@ -92,11 +89,11 @@
           background-color: #ffffff;
           overflow-x: hidden;
           overflow-y: scroll;
-          padding-top: 50px; /* Place content 60px from the top */
-          transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+          padding-top: 50px; 
+          transition: 0.5s;
       }
 
-      /* The navigation menu links */
+      /* Navigation menu links */
       .sidenav a {
           padding: 8px 8px 8px 8px;
           text-decoration: none;
@@ -106,12 +103,10 @@
           transition: 0.3s
       }
 
-      /* When you mouse over the navigation links, change their color */
       .sidenav a:hover, .offcanvas a:focus{
           color: #f1f1f1;
       }
 
-      /* Position and style the close button (top right corner) */
       .sidenav .closebtn {
           position: absolute;
           top: 0;
@@ -120,106 +115,100 @@
           margin-left: 50px;
       }
 
-      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
       @media screen and (max-height: 450px) {
           .sidenav {padding-top: 15px;}
           .sidenav a {font-size: 18px;}
       }
 
 
-    /* Style the tab */
-	div.tab {
-	    overflow: hidden;
-	    background-color: #ffffff;
-	    margin-left: 24px;
-	    margin-right: 2.4em;
-	}
+      /* Featured Locations Tab */
+	  div.tab {
+	      overflow: hidden;
+	      background-color: #ffffff;
+	      margin-left: 24px;
+	      margin-right: 2.4em;
+	  }
 
-	/* Style the buttons inside the tab */
-	div.tab button {
-	    background-color: inherit;
-	    float: left;
-	    border: 1px solid #f1f1f1;
-	    outline: none;
-	    cursor: pointer;
-      font-family: 'Matter-Medium';
-	    padding: 10px 10px;
-	    transition: 0.3s;
-	}
+	  div.tab button {
+	      background-color: inherit;
+	      float: left;
+	      border: 1px solid #f1f1f1;
+	      outline: none;
+  	      cursor: pointer;
+       	  font-family: 'Matter-Medium';
+	      padding: 10px 10px;
+	      transition: 0.3s;
+	  }
 
-	/* Change background color of buttons on hover */
-	div.tab button:hover {
-	    background-color: #f8f8f8;
-	}
+	  div.tab button:hover {
+	      background-color: #f8f8f8;
+	  }
 
-	/* Create an active/current tablink class */
-	div.tab button.active {
-	    background-color: #f1f1f1;
-	}
+	  div.tab button.active {
+	      background-color: #f1f1f1;
+	  }
 
-	/* Style the tab content */
-	.tabcontent {
-	    display: none;
-	    padding: 6px 12px;
-	    border-top: none;
-	    margin-left: 8px;
-	}
+	  .tabcontent {
+	      display: none;
+	      padding: 6px 12px;
+	      border-top: none;
+	      margin-left: 8px;
+	  }
 
 
-  .slideshow-container {
-  position: relative;
-  margin-left:6px; 
-  width:274px;
-}
+	  /* Featured Locations Image Slideshow */
+  	  .slideshow-container {
+  	  	  position: relative;
+  		  margin-left:6px; 
+ 		  width:274px;
+	  }
 
-.mySlides {
-    display: none;
-}
+	  .mySlides {
+	      display: none;
+	  }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-size: 2px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
+	  .prev, .next {
+	   	  cursor: pointer;
+	 	  position: absolute;
+	 	  top: 50%;
+	 	  width: auto;
+	 	  margin-top: -22px;
+	      padding: 16px;
+	  	  color: white;
+	  	  font-size: 2px;
+	  	  transition: 0.6s ease;
+	  	  border-radius: 0 3px 3px 0;
+	  }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+	  .next {
+	      right: 0;
+	      border-radius: 3px 0 0 3px;
+	  }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.2s;
-  animation-name: fade;
-  animation-duration: 1.2s;
-}
+	  .fade {
+	      -webkit-animation-name: fade;
+	      -webkit-animation-duration: 1.2s;
+	  	  animation-name: fade;
+	  	  animation-duration: 1.2s;
+	  }
 
-@-webkit-keyframes fade {
-  from {opacity: .5} 
-  to {opacity: 1}
-}
+	  @-webkit-keyframes fade {
+	  	  from {opacity: .5} 
+	  	  to {opacity: 1}
+	  }
 
-@keyframes fade {
-  from {opacity: .5} 
-  to {opacity: 1}
-}
-
+	  @keyframes fade {
+	  	  from {opacity: .5} 
+	  	  to {opacity: 1}
+	  }
 
     </style>
   </head>
+
+
   <body>
 
-  <img src='fhlogo.png' id="logo" alt='Food Haven' style='width:20%;' onclick="openNav()">&#9776;>
+    <img src='fhlogo.png' id="logo" alt='Food Haven' style='width:20%;' onclick="openNav()">&#9776;>
 
     <div id='map'></div>
 
@@ -236,65 +225,67 @@
 		  <button class="tablinks" onclick="openLoc(event, 'Loaves')" id="defaultOpen">Loaves & Fishes</button>
 		  <button class="tablinks" onclick="openLoc(event, 'Sunrise')">Sunrise Café</button>
 		  <button class="tablinks" onclick="openLoc(event, 'Varick')">Varick AME</button>
-		</div>
-		<br>
-		<div id="Loaves" class="tabcontent">
+	  </div>
+	  
+	  <br>
 
-      <div class="slideshow-container" style="top:-7px; margin-bottom:-25px;">
-        <div class="mySlides1 fade">
-          <img src="lf3.png" style="width:100%">
+	  <div id="Loaves" class="tabcontent">
+
+        <div class="slideshow-container" style="top:-7px; margin-bottom:-25px;">
+          <div class="mySlides1 fade">
+          	<img src="lf3.png" style="width:100%">
+          </div>
+
+          <div class="mySlides1 fade">
+          	<img src="lf2.png" style="width:100%">
+          </div>
+
+          <div class="mySlides1 fade">
+          	<img src="lf5.png" style="width:100%">
+          </div>
+
+          <div class="mySlides1 fade">
+          	<img src="lf4.png" style="width:100%">
+          </div>
+
+          <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides1(-1)">&#10094;</a>
+          <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides1(1)">&#10095;</a>
         </div>
 
-        <div class="mySlides1 fade">
-          <img src="lf2.png" style="width:100%">
-        </div>
-
-        <div class="mySlides1 fade">
-          <img src="lf5.png" style="width:100%">
-        </div>
-
-        <div class="mySlides1 fade">
-          <img src="lf4.png" style="width:100%">
-        </div>
-
-        <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides1(-1)">&#10094;</a>
-        <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides1(1)">&#10095;</a>
-      </div>
-
-      <br><br>
-		  <p style='font-size:0.8em; margin-right: 4em; margin-bottom: 5em;'>
+        <br><br>
+	    <p style='font-size:0.8em; margin-right: 4em; margin-bottom: 5em;'>
           Loaves & Fishes (019) is a food pantry operating in the Church of St. Paul & St. James in Wooster Square. Services are available every Saturday morning from <br>9-10:30. Between 200 and 300 people are served each week, and nobody is turned away. The pantry only requires that patrons fill out a one-time, single-page form upon their first visit to the pantry. In addition to operating its pantry, Loaves and Fishes has a clothes closet with free donated clothes, and it has a partnership with Yale’s medical school to make basic medical care available to its patrons.<br><br>
           Our trip there led us to hearing compelling stories from patrons and volunteers. One patron-turned-volunteer gave us a tour of the facility and offered us the story of his relationship to the Loaves and Fishes community. The close community cultivated at Loaves and Fishes has helped to lift its patrons out of hard times and inspired a few of them to volunteer at the pantry. Now, he works at the pantry throughout the week where he can be a part of the community that got him back on his feet.<br><br>
           Loaves & Fishes has been in operation close to 35 years. Only twice have they been forced to close due to inclement conditions. The warmth and devotion of each volunteer and organizer is central to the success of this pantry. The facility is located in the basement of the church. The walls are covered in vibrant murals and the space is very clean. The diverse group of patrons comes from all over the city. While most of the guests walk from within a one-mile radius, some take the city bus to the pantry. In special cases, those in the direct vicinity who cannot make it to the church are delivered their respective bags of food each Saturday.<br><br>
           Food options can range broadly week-to-week, but kitchen staples such as bread, grains and canned goods are always available. They make a concerted effort to provide healthier options like vegetables, fruits and proteins. It takes approximately $1000 a week to feed an average of 250 patrons and their households. According to a patron-turned-employee, the food provided by the pantry can last its patrons the entire week. The majority of this funding comes from friends and family of the coordinators as well as local businesses.<br><br>
           While at Loaves and Fishes, we were also able to speak with a man who joined the Loaves and Fishes community over 20 years ago after immigrating from Jamaica. He uses the service and volunteers every week. Apart from clothing and food, Loaves and Fishes a community that has forever changed him. His rocky beginnings in the US tangled him up with the wrong crowd. After he was incarcerated, AA meetings and Saturday mornings at L & F helped him get back on his feet. The supportive nature of the space kept his improvement and well being on track. Now, after 20 years, he still volunteers every Saturday with some of his closest friends and mentors—and maybe a warm cup of coffee too.
-      </p>
-		</div>
+        </p>
+	  </div>
 
-		<div id="Sunrise" class="tabcontent">
-		  <div class="slideshow-container" style="top:-7px; margin-bottom:-25px;">
-        <div class="mySlides2 fade">
-          <img src="sc1.png" style="width:100%">
+	  <div id="Sunrise" class="tabcontent">
+		<div class="slideshow-container" style="top:-7px; margin-bottom:-25px;">
+          <div class="mySlides2 fade">
+            <img src="sc1.png" style="width:100%">
+          </div>
+
+          <div class="mySlides2 fade">
+            <img src="sc2.png" style="width:100%">
+          </div>
+
+          <div class="mySlides2 fade">
+            <img src="sc3.png" style="width:100%">
+          </div>
+
+          <div class="mySlides2 fade">
+            <img src="sc4.png" style="width:100%">
+          </div>
+
+          <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides2(-1)">&#10094;</a>
+          <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides2(1)">&#10095;</a>
         </div>
 
-        <div class="mySlides2 fade">
-          <img src="sc2.png" style="width:100%">
-        </div>
-
-        <div class="mySlides2 fade">
-          <img src="sc3.png" style="width:100%">
-        </div>
-
-        <div class="mySlides2 fade">
-          <img src="sc4.png" style="width:100%">
-        </div>
-
-        <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides2(-1)">&#10094;</a>
-        <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides2(1)">&#10095;</a>
-      </div>
-
-      <br><br>
-      <p style='font-size:0.8em; margin-right: 4em; margin-bottom: 5em;'>
+        <br><br>
+        <p style='font-size:0.8em; margin-right: 4em; margin-bottom: 5em;'>
           The Sunrise Café is no ordinary soup kitchen. In fact, they don’t even serve soup. It’s a breakfast
           establishment, with eggs, pancakes, oatmeal, and the like on the menu. And the menu,
           presented on a white board in the middle of the Café, has choices of hot dishes for its patrons.
@@ -324,210 +315,205 @@
           Sunrise Café is located in the ground floor of St. Paul and St. James Episcopal Church at the
           corner of Olive and Chapel Streets, near Wooster Square. Breakfast is served each weekday from
           7:30am to 9:30am, and no one is turned away.
-      </p>
-		</div>
-
-		<div id="Varick" class="tabcontent">
-		        <div class="slideshow-container" style="top:-7px; margin-bottom:-25px;">
-        <div class="mySlides3 fade">
-          <img src="v1.png" style="width:100%">
-        </div>
-
-        <div class="mySlides3 fade">
-          <img src="v2.png" style="width:100%">
-        </div>
-
-        <div class="mySlides3 fade">
-          <img src="v5.png" style="width:100%">
-        </div>
-
-        <div class="mySlides3 fade">
-          <img src="v4.png" style="width:100%">
-        </div>
-
-        <div class="mySlides3 fade">
-          <img src="v3.png" style="width:100%">
-        </div>
-
-        <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides3(-1)">&#10094;</a>
-        <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides3(1)">&#10095;</a>
-      </div>
-
-      <br><br>
-      <p style='font-size:0.8em; margin-right: 4em; margin-bottom: 5em;'>
-          Varick AME Zion is located at 246 Dixwell Avenue, near the corner of Dixwell Avenue and Charles Street. This soup kitchen is open on Mondays from 5:30 to 6:30pm, with food pantry services available on the first Saturday of each month from 10:00am to 12:00pm.
-      </p>
+        </p>
 	  </div>
-  </div>
 
+	  <div id="Varick" class="tabcontent">
+		<div class="slideshow-container" style="top:-7px; margin-bottom:-25px;">
+          <div class="mySlides3 fade">
+            <img src="v1.png" style="width:100%">
+          </div>
+
+          <div class="mySlides3 fade">
+            <img src="v2.png" style="width:100%">
+          </div>
+
+          <div class="mySlides3 fade">
+            <img src="v5.png" style="width:100%">
+          </div>
+
+          <div class="mySlides3 fade">
+            <img src="v4.png" style="width:100%">
+          </div>
+
+          <div class="mySlides3 fade">
+            <img src="v3.png" style="width:100%">
+          </div>
+
+          <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides3(-1)">&#10094;</a>
+          <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides3(1)">&#10095;</a>
+        </div>
+
+        <br><br>
+        <p style='font-size:0.8em; margin-right: 4em; margin-bottom: 5em;'>
+          Varick AME Zion is located at 246 Dixwell Avenue, near the corner of Dixwell Avenue and Charles Street. This soup kitchen is open on Mondays from 5:30 to 6:30pm, with food pantry services available on the first Saturday of each month from 10:00am to 12:00pm.
+        </p>
+	  </div>
+    </div>
 
 
     <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZG1lcmxldHRlIiwiYSI6ImNqM3JobWdoNDAwNTEzM29pdXVkeGlhN2sifQ.8zzSWozO55eNkTZHisHqjQ';
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/dmerlette/cj6bj9pw348al2rui8bumd4cz',
-      center: [-72.922, 41.315],
-      zoom: 12.5,
-      minZoom: 12
-    });
+
+    	// Mapbox Map Initialization
+	    mapboxgl.accessToken = 'pk.eyJ1IjoiZG1lcmxldHRlIiwiYSI6ImNqM3JobWdoNDAwNTEzM29pdXVkeGlhN2sifQ.8zzSWozO55eNkTZHisHqjQ';
+	    var map = new mapboxgl.Map({
+	      container: 'map',
+	      style: 'mapbox://styles/dmerlette/cj6bj9pw348al2rui8bumd4cz',
+	      center: [-72.922, 41.315],
+	      zoom: 12.5,
+	      minZoom: 12
+	    });
 
     
-    // Markers
-      map.on('click', function(e) {
-      var features = map.queryRenderedFeatures(e.point, {
-       layers: ['food pantries', 'soup kitchens', 'grocery stores'] // replace this with the name of the layer
-     });
+	    // Markers
+	    map.on('click', function(e) {
+	      var features = map.queryRenderedFeatures(e.point, {
+	      	layers: ['food pantries', 'soup kitchens', 'grocery stores']
+	      });
 
-     if (!features.length) {
-        return;
-     }
+     	  if (!features.length) {
+          	return;
+          }
 
-      var feature = features[0];
+          var feature = features[0];
 
-    // Popups
-     var popup = new mapboxgl.Popup({ offset: [0, -15] })
-       .setLngLat(feature.geometry.coordinates)
-       .setHTML('<h3 style="margin-left:0.34em;">' + feature.properties.Mark + '</h3><h3 style="margin-left:3.2em; margin-top:-1.66em;">' + feature.properties.isCalled + '</h3><p style="margin-left:3.2em;">' + feature.properties.Type + '<br>-<br>' + 
-       		feature.properties.Address1 + ',<br>' + feature.properties.Address2 + '<br>' + feature.properties.Hours + '</p>')
-       .setLngLat(feature.geometry.coordinates)
-       .addTo(map);
-    });
+	      // Popups
+	      var popup = new mapboxgl.Popup({ offset: [0, -15] })
+	      .setLngLat(feature.geometry.coordinates)
+	      .setHTML('<h3 style="margin-left:0.34em;">' + feature.properties.Mark + '</h3><h3 style="margin-left:3.2em; margin-top:-1.66em;">' + 
+	      	    feature.properties.isCalled + '</h3><p style="margin-left:3.2em;">' + feature.properties.Type + '<br>-<br>' + 
+	       		feature.properties.Address1 + ',<br>' + feature.properties.Address2 + '<br>' + feature.properties.Hours + '</p>')
+	      .setLngLat(feature.geometry.coordinates)
+	      .addTo(map);
+	    });
 
-      // Add zoom and rotation controls to the map.
-      var nav = new mapboxgl.NavigationControl();
-      map.addControl(nav, 'bottom-right');
-
-
-    // Sidebar controls
-    document.getElementById("mySidenav").style.width = "350px";
-    document.getElementById("mySidenav").style.marginLeft = "-350px";
+        // Add zoom and rotation controls to the map.
+        var nav = new mapboxgl.NavigationControl();
+        map.addControl(nav, 'bottom-right');
 
 
-    function openNav() {
-        document.getElementById("mySidenav").style.marginLeft = "0px";
-    }
+	    // Sidebar controls
+	    document.getElementById("mySidenav").style.width = "350px";
+	    document.getElementById("mySidenav").style.marginLeft = "-350px";
 
-    function closeNav() {
-
-        // Declare all variables
-        var i, tabcontent, tablinks;
-
-        document.getElementById("mySidenav").style.marginLeft = "-350px";
-
-        // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-    }
-
-
-    function openLoc(evt, Name) {
-	    // Declare all variables
-	    var i, tabcontent, tablinks;
-
-	    // Get all elements with class="tabcontent" and hide them
-	    tabcontent = document.getElementsByClassName("tabcontent");
-	    for (i = 0; i < tabcontent.length; i++) {
-	        tabcontent[i].style.display = "none";
+	    function openNav() {
+	        document.getElementById("mySidenav").style.marginLeft = "0px";
 	    }
 
-	    // Get all elements with class="tablinks" and remove the class "active"
-	    tablinks = document.getElementsByClassName("tablinks");
-	    for (i = 0; i < tablinks.length; i++) {
-	        tablinks[i].className = tablinks[i].className.replace(" active", "");
+	    function closeNav() {
+
+	        // Declare all variables
+	        var i, tabcontent, tablinks;
+
+	        document.getElementById("mySidenav").style.marginLeft = "-350px";
+
+	        // Get all elements with class="tabcontent" and hide them
+	        tabcontent = document.getElementsByClassName("tabcontent");
+	        for (i = 0; i < tabcontent.length; i++) {
+	            tabcontent[i].style.display = "none";
+	        }
+
+	        // Get all elements with class="tablinks" and remove the class "active"
+	        tablinks = document.getElementsByClassName("tablinks");
+	        for (i = 0; i < tablinks.length; i++) {
+	            tablinks[i].className = tablinks[i].className.replace(" active", "");
+	        }
 	    }
 
-	    // Show the current tab, and add an "active" class to the button that opened the tab
-	    document.getElementById(Name).style.display = "block";
-	    evt.currentTarget.className += " active";
 
-	 }
+	    function openLoc(evt, Name) {
+		    
+		    // Declare all variables
+		    var i, tabcontent, tablinks;
 
-    // Slideshow
-    var slideIndex1 = 1;
-    var slideIndex2 = 1;
-    var slideIndex3 = 1;
-    showSlides1(slideIndex1);
-    showSlides2(slideIndex2);
-    showSlides3(slideIndex3);
+		    // Get all elements with class="tabcontent" and hide them
+		    tabcontent = document.getElementsByClassName("tabcontent");
+		    for (i = 0; i < tabcontent.length; i++) {
+		        tabcontent[i].style.display = "none";
+		    }
 
-    function plusSlides1(n) {
-      showSlides1(slideIndex1 += n);
-    }
+		    // Get all elements with class="tablinks" and remove the class "active"
+		    tablinks = document.getElementsByClassName("tablinks");
+		    for (i = 0; i < tablinks.length; i++) {
+		        tablinks[i].className = tablinks[i].className.replace(" active", "");
+		    }
 
-    function plusSlides2(n) {
-      showSlides2(slideIndex2 += n);
-    }
+		    // Show the current tab, and add an "active" class to the button that opened the tab
+		    document.getElementById(Name).style.display = "block";
+		    evt.currentTarget.className += " active";
+		}
 
-    function plusSlides3(n) {
-      showSlides3(slideIndex3 += n);
-    }
+	    // Slideshow
+	    var slideIndex1 = 1;
+	    var slideIndex2 = 1;
+	    var slideIndex3 = 1;
+	    showSlides1(slideIndex1);
+	    showSlides2(slideIndex2);
+	    showSlides3(slideIndex3);
 
-    function currentSlide1(n) {
-      showSlides1(slideIndex1 = n);
-    }
+	    function plusSlides1(n) {
+	      showSlides1(slideIndex1 += n);
+	    }
 
-    function currentSlide2(n) {
-      showSlides2(slideIndex2 = n);
-    }
+	    function plusSlides2(n) {
+	      showSlides2(slideIndex2 += n);
+	    }
 
-    function currentSlide3(n) {
-      showSlides3(slideIndex3 = n);
-    }
+	    function plusSlides3(n) {
+	      showSlides3(slideIndex3 += n);
+	    }
 
-    function showSlides1(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides1");
+	    function currentSlide1(n) {
+	      showSlides1(slideIndex1 = n);
+	    }
 
-      if (n > slides.length) {slideIndex1 = 1} 
-      if (n < 1) {slideIndex1 = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none"; 
-      }
+	    function currentSlide2(n) {
+	      showSlides2(slideIndex2 = n);
+	    }
 
-      slides[slideIndex1-1].style.display = "block"; 
+	    function currentSlide3(n) {
+	      showSlides3(slideIndex3 = n);
+	    }
 
-    }
+	    function showSlides1(n) {
+	      var i;
+	      var slides = document.getElementsByClassName("mySlides1");
 
-    function showSlides2(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides2");
+	      if (n > slides.length) {slideIndex1 = 1} 
+	      if (n < 1) {slideIndex1 = slides.length}
+	      for (i = 0; i < slides.length; i++) {
+	          slides[i].style.display = "none"; 
+	      }
 
-      if (n > slides.length) {slideIndex2 = 1} 
-      if (n < 1) {slideIndex2 = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none"; 
-      }
+	      slides[slideIndex1-1].style.display = "block"; 
+	    }
 
-      slides[slideIndex2-1].style.display = "block"; 
+	    function showSlides2(n) {
+	      var i;
+	      var slides = document.getElementsByClassName("mySlides2");
 
-    }
+	      if (n > slides.length) {slideIndex2 = 1} 
+	      if (n < 1) {slideIndex2 = slides.length}
+	      for (i = 0; i < slides.length; i++) {
+	          slides[i].style.display = "none"; 
+	      }
 
-    function showSlides3(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides3");
+	      slides[slideIndex2-1].style.display = "block"; 
+	    }
 
-      if (n > slides.length) {slideIndex3 = 1} 
-      if (n < 1) {slideIndex3 = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none"; 
-      }
+	    function showSlides3(n) {
+	      var i;
+	      var slides = document.getElementsByClassName("mySlides3");
 
-      slides[slideIndex3-1].style.display = "block"; 
+	      if (n > slides.length) {slideIndex3 = 1} 
+	      if (n < 1) {slideIndex3 = slides.length}
+	      for (i = 0; i < slides.length; i++) {
+	          slides[i].style.display = "none"; 
+	      }
 
-    }
-
-
-    </script>
-
+	      slides[slideIndex3-1].style.display = "block"; 
+	    }
+	</script>
 
   </body>
 </html>
