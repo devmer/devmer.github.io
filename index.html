@@ -21,31 +21,30 @@
       }
 
       h1 {
-      	font-family: 'Matter-Bold', Helvetica, sans-serif;
+        font-family: 'Matter-Bold', Helvetica, sans-serif;
       }
 
       h3 {
-      	font-family: 'Matter-Bold', Helvetica, sans-serif;
-      	font-size: 1em;
-      	margin-bottom: 0em;
-      	margin-top: 0em;
-      	margin-left: 0.45em;
-      	margin-right: 0.45em;
+        font-family: 'Matter-Bold', Helvetica, sans-serif;
+        font-size: 1em;
+        margin-bottom: 0em;
+        margin-top: 0em;
+        margin-left: 0.45em;
+        margin-right: 0.45em;
       }
 
       p {
-      	font-family: 'Matter-Medium', Helvetica, sans-serif;
-      	font-size: 1em;
-      	margin-bottom: 0em;
-      	margin-top: 0em;
-      	margin-left: 0.45em;
-      	margin-right: 0.45em;
-      	line-height: 135%;
+        font-family: 'Matter-Medium', Helvetica, sans-serif;
+        font-size: 1em;
+        margin-bottom: 0em;
+        margin-top: 0em;
+        margin-left: 0.45em;
+        margin-right: 0.45em;
+        line-height: 135%;
       }
 
-
       body {
-      	font-family: 'Matter-Medium', Helvetica, sans-serif;
+        font-family: 'Matter-Medium', Helvetica, sans-serif;
         margin: 0;
         padding: 0;
       }
@@ -75,10 +74,63 @@
         z-index: 1;
       }
 
-      #logo:hover {opacity: 0.7;}
+      #logo:hover {opacity: 0.6;}
+
+      div.navi {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        width: 100px;
+        z-index: 7;
+      }
+
+      div.navi button {
+        font-family: 'Matter-Bold';
+        font-size: 1.05em;
+        color: #000000;
+        background-color: transparent;
+        padding: 0px 0px;
+        border: none;
+        outline: 2px;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.2s;
+        overflow-y: scroll;
+      }
+
+      div.navi button:hover {
+        opacity: 0.6;
+      }
+
+      div.navi button.active {
+        opacity: 0.1;
+      }
+
+      .navicontent {
+        position: relative;
+        z-index: 7;
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+        margin-left: 6px;
+        margin-right: 2em;
+        font-family: 'Matter-Medium';
+        font-size: 1.05em;
+      }
+
+      #behindNavi {
+          height: 122px;
+          width: 0;
+          position: fixed;
+          z-index: 6;
+          top: 0;
+          left: 0;
+          background-color: #ffffff;
+          transition: 0.5s;
+      }
 
 
-      /* The side navigation menu */
+      /* Sidebar */
       .sidenav {
           height: 100%;
           width: 0;
@@ -89,11 +141,10 @@
           background-color: #ffffff;
           overflow-x: hidden;
           overflow-y: scroll;
-          padding-top: 50px; /* Place content 60px from the top */
-          transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+          padding-top: 150px;
+          transition: 0.5s; 
       }
 
-      /* The navigation menu links */
       .sidenav a {
           padding: 8px 8px 8px 8px;
           text-decoration: none;
@@ -103,260 +154,275 @@
           transition: 0.3s
       }
 
-      /* When you mouse over the navigation links, change their color */
       .sidenav a:hover, .offcanvas a:focus{
           color: #f1f1f1;
       }
 
-      /* Position and style the close button (top right corner) */
-      .sidenav .closebtn {
+      .closebtn {
           position: absolute;
-          top: 0;
+          top: 0px;
           right: 8px;
           font-size: 24px;
           margin-left: 50px;
+          z-index: 7;
       }
 
-      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
       @media screen and (max-height: 450px) {
           .sidenav {padding-top: 15px;}
           .sidenav a {font-size: 18px;}
       }
 
+    
+      div.tab {
+          overflow: hidden;
+          background-color: #ffffff;
+          margin-left: 7px;
+      }
 
-    /* Style the tab */
-	div.tab {
-	    overflow: hidden;
-	    background-color: #ffffff;
-	    margin-left: 24px;
-	    margin-right: 2.4em;
-	}
+      div.tab button {
+          background-color: inherit;
+          float: left;
+          border: 1px solid #f1f1f1;
+          outline: none;
+          cursor: pointer;
+          font-family: 'Matter-Medium';
+          padding: 8px 10px;
+          transition: 0.3s;
+      }
 
-	/* Style the buttons inside the tab */
-	div.tab button {
-	    background-color: inherit;
-	    float: left;
-	    border: 1px solid #f1f1f1;
-	    outline: none;
-	    cursor: pointer;
-      font-family: 'Matter-Medium';
-	    padding: 10px 10px;
-	    transition: 0.3s;
-	}
+      div.tab button:hover {
+          background-color: #f8f8f8;
+      }
 
-	/* Change background color of buttons on hover */
-	div.tab button:hover {
-	    background-color: #f8f8f8;
-	}
+      div.tab button.active {
+          background-color: #f1f1f1;
+      }
 
-	/* Create an active/current tablink class */
-	div.tab button.active {
-	    background-color: #f1f1f1;
-	}
-
-	/* Style the tab content */
-	.tabcontent {
-	    display: none;
-	    padding: 6px 12px;
-	    border-top: none;
-	    margin-left: 8px;
-	}
+      .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border-top: none;
+          margin-left: -6px;
+      }
 
 
-  .slideshow-container {
-  position: relative;
-  margin-left:6px; 
-  width:274px;
-}
+      .slideshow-container {
+          position: relative;
+          margin-left:3px; 
+          width:274px;
+      }
 
-.mySlides {
-    display: none;
-}
+      .mySlides {
+          display: none;
+      }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-size: 2px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
+      /* Next & previous buttons */
+      .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: white;
+          font-size: 2px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+      }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+      /* Position the "next button" to the right */
+      .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+      }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.2s;
-  animation-name: fade;
-  animation-duration: 1.2s;
-}
+      /* Fading animation */
+      .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.2s;
+          animation-name: fade;
+          animation-duration: 1.2s;
+      }
 
-@-webkit-keyframes fade {
-  from {opacity: .5} 
-  to {opacity: 1}
-}
+      @-webkit-keyframes fade {
+          from {opacity: .5} 
+          to {opacity: 1}
+      }
 
-@keyframes fade {
-  from {opacity: .5} 
-  to {opacity: 1}
-}
-
+      @keyframes fade {
+          from {opacity: .5} 
+          to {opacity: 1}
+      }
 
     </style>
   </head>
+
   <body>
 
-  <img src='fhlogo.png' id="logo" alt='Food Haven' style='width:20%;' onclick="openNav()">&#9776;>
+
+    <!-- Food Haven Logo -->
+    <img src='fhlogo.png' id="logo" alt='Food Haven' style='width:20%;' onclick="openNavi(event, 'Info')">&#9776;>
+
+
+    <!-- Left Navigation Links -->
+    <div class="navi">
+      <button class="navilinks" onclick="openNavi(event, 'About')">About</button>
+      <button class="navilinks" onclick="openNavi(event, 'Downloads')">Downloads</button>
+      <button class="navilinks" onclick="openNavi(event, 'Featured')">Featured</button>
+    </div>
+
+    <div id="behindNavi"></div>
 
     <div id='map'></div>
 
+
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <h1 style='font-size:1.2em; margin-left: 25px; margin-right: 1.2em; margin-top: 0em;'>
-      		What is Food Haven?</h1>
-      <p style='font-size:0.8em; margin-left: 25px; margin-right: 4em;'>
-      		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit id ex blandit pulvinar. Mauris id fringilla placerat nisl vitae dictum. Nam ac nibh eu neque porta euismod id vel magna. Donec tincidunt ligula convallis condimentum tempor.<br><br> Printable versions of the map are also available here.</p>
-      <br><br><br>
-      <h1 style='font-size:1.2em; margin-left: 25px; margin-right: 1.2em; margin-top: 0em;'>
-      		Featured Locations</h1>
-      <div class="tab">
-		  <button class="tablinks" onclick="openLoc(event, 'Loaves')" id="defaultOpen">Loaves & Fishes</button>
-		  <button class="tablinks" onclick="openLoc(event, 'Sunrise')">Sunrise Café</button>
-		  <button class="tablinks" onclick="openLoc(event, 'Varick')">Varick AME</button>
-		</div>
-		<br>
-		<div id="Loaves" class="tabcontent">
-
-      <div class="slideshow-container" style="top:-7px; margin-bottom:-25px;">
-        <div class="mySlides1 fade">
-          <img src="lf3.png" style="width:100%">
-        </div>
-
-        <div class="mySlides1 fade">
-          <img src="lf2.png" style="width:100%">
-        </div>
-
-        <div class="mySlides1 fade">
-          <img src="lf5.png" style="width:100%">
-        </div>
-
-        <div class="mySlides1 fade">
-          <img src="lf4.png" style="width:100%">
-        </div>
-
-        <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides1(-1)">&#10094;</a>
-        <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides1(1)">&#10095;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNavi()">&times;</a>
+      <div id="About" class="navicontent">
+        <h3>What is Food Haven?</h3><br>
+        <p>Food Haven is a directory and map of food pantries, soup kitchens, and grocery stores located in the New Haven, Connecticut area.</p>
       </div>
 
-      <br><br>
-		  <p style='font-size:0.8em; margin-right: 4em; margin-bottom: 5em;'>
-          Loaves & Fishes (019) is a food pantry operating in the Church of St. Paul & St. James in Wooster Square. Services are available every Saturday morning from <br>9-10:30. Between 200 and 300 people are served each week, and nobody is turned away. The pantry only requires that patrons fill out a one-time, single-page form upon their first visit to the pantry. In addition to operating its pantry, Loaves and Fishes has a clothes closet with free donated clothes, and it has a partnership with Yale’s medical school to make basic medical care available to its patrons.<br><br>
-          Our trip there led us to hearing compelling stories from patrons and volunteers. One patron-turned-volunteer gave us a tour of the facility and offered us the story of his relationship to the Loaves and Fishes community. The close community cultivated at Loaves and Fishes has helped to lift its patrons out of hard times and inspired a few of them to volunteer at the pantry. Now, he works at the pantry throughout the week where he can be a part of the community that got him back on his feet.<br><br>
-          Loaves & Fishes has been in operation close to 35 years. Only twice have they been forced to close due to inclement conditions. The warmth and devotion of each volunteer and organizer is central to the success of this pantry. The facility is located in the basement of the church. The walls are covered in vibrant murals and the space is very clean. The diverse group of patrons comes from all over the city. While most of the guests walk from within a one-mile radius, some take the city bus to the pantry. In special cases, those in the direct vicinity who cannot make it to the church are delivered their respective bags of food each Saturday.<br><br>
-          Food options can range broadly week-to-week, but kitchen staples such as bread, grains and canned goods are always available. They make a concerted effort to provide healthier options like vegetables, fruits and proteins. It takes approximately $1000 a week to feed an average of 250 patrons and their households. According to a patron-turned-employee, the food provided by the pantry can last its patrons the entire week. The majority of this funding comes from friends and family of the coordinators as well as local businesses.<br><br>
-          While at Loaves and Fishes, we were also able to speak with a man who joined the Loaves and Fishes community over 20 years ago after immigrating from Jamaica. He uses the service and volunteers every week. Apart from clothing and food, Loaves and Fishes a community that has forever changed him. His rocky beginnings in the US tangled him up with the wrong crowd. After he was incarcerated, AA meetings and Saturday mornings at L & F helped him get back on his feet. The supportive nature of the space kept his improvement and well being on track. Now, after 20 years, he still volunteers every Saturday with some of his closest friends and mentors—and maybe a warm cup of coffee too.
-      </p>
-		</div>
-
-		<div id="Sunrise" class="tabcontent">
-		  <div class="slideshow-container" style="top:-7px; margin-bottom:-25px;">
-        <div class="mySlides2 fade">
-          <img src="sc1.png" style="width:100%">
-        </div>
-
-        <div class="mySlides2 fade">
-          <img src="sc2.png" style="width:100%">
-        </div>
-
-        <div class="mySlides2 fade">
-          <img src="sc3.png" style="width:100%">
-        </div>
-
-        <div class="mySlides2 fade">
-          <img src="sc4.png" style="width:100%">
-        </div>
-
-        <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides2(-1)">&#10094;</a>
-        <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides2(1)">&#10095;</a>
+      <div id="Downloads" class="navicontent">
+        <h3>Printable Map</h3><br>
+        <p>A portable version of the map is available for print here. Please see the document for instructions on printing and folding the map.</p> 
       </div>
 
-      <br><br>
-      <p style='font-size:0.8em; margin-right: 4em; margin-bottom: 5em;'>
-          The Sunrise Café is no ordinary soup kitchen. In fact, they don’t even serve soup. It’s a breakfast
-          establishment, with eggs, pancakes, oatmeal, and the like on the menu. And the menu,
-          presented on a white board in the middle of the Café, has choices of hot dishes for its patrons.
-          You don’t just get whatever they’re serving that day—you put in your order.<br><br>
-          John Bradley, executive director of Liberty Community Services, a 30-year- old organization
-          that’s charged itself to end homeless, says it’s a different sort of model. “We try to make it
-          slightly different from a soup kitchen, where the volunteers are in the back.” Here, volunteers
-          in aprons take orders and carry trays back and forth from the kitchen. “We try to make it more
-          like a community café. People come and place their orders, and then get served at their tables
-          by our volunteers.”<br><br>
-          Sunrise Café came to be in March 2015 after some discussions between Bradley, Ellen Daniel,
-          and other founders. They felt like there was a gap to fill. Many New Haven soup kitchens are
-          open only select days of the week, and most offer lunch or dinner. A hot breakfast was harder
-          to find.<br><br>
-          “So we said, let’s try this, do it every day, be more consistent, and really develop the breakfast
-          food options,” Bradley said.<br><br>
-          But more happens at Sunrise Café than the provision of hot breakfasts. “We’re about creating a
-          community here,” Bradley described. “People who may not seek out social services may still
-          come in for the meal, but we can engage in other ways once they’re here.” This might mean
-          helping a couple get housing, or assisting someone in traveling across the country to see his
-          family again—both of which Bradley has examples of.<br><br>
-          Scott C. first started coming to the Café for the food, but now he’s a volunteer. “Just because
-          I’m in a bad situation, and I’m homeless, doesn’t mean I can’t help out. I won’t be stagnant.”<br><br>
-          While he works on housing and makes plans to rebuild his power washing business, the
-          community at Sunrise Café keeps him in a good mindset. “Volunteering here humbles me, and
-          also puts things in perspective.”<br><br>
-          Sunrise Café is located in the ground floor of St. Paul and St. James Episcopal Church at the
-          corner of Olive and Chapel Streets, near Wooster Square. Breakfast is served each weekday from
-          7:30am to 9:30am, and no one is turned away.
-      </p>
-		</div>
+      <div id="Featured" class="navicontent">
+        <h3 style="margin-bottom: 1.4em">Featured Locations</h3>
+        <div class="tab">
+          <button class="tablinks" onclick="openLoc(event, 'Loaves')" id="defaultOpen">Loaves & Fishes</button>
+          <button class="tablinks" onclick="openLoc(event, 'Sunrise')">Sunrise Café</button>
+          <button class="tablinks" onclick="openLoc(event, 'Varick')">Varick AME</button>
+        </div>
+        <br>
+        <div id="Loaves" class="tabcontent">
 
-		<div id="Varick" class="tabcontent">
-		        <div class="slideshow-container" style="top:-7px; margin-bottom:-25px;">
-        <div class="mySlides3 fade">
-          <img src="v1.png" style="width:100%">
+          <div class="slideshow-container" style="top:-24px; margin-bottom:-43px;">
+            <div class="mySlides1 fade">
+              <img src="lf3.png" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <img src="lf2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <img src="lf5.png" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+              <img src="lf4.png" style="width:100%">
+            </div>
+
+            <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides1(-1)">&#10094;</a>
+            <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides1(1)">&#10095;</a>
+          </div>
+
+          <br><br>
+            <p style='margin-right: 0.5em; margin-bottom: 10em; margin-left: 3px;'>
+              Loaves & Fishes (019) is a food pantry operating in the Church of St. Paul & St. James in Wooster Square. Services are available every Saturday morning from 9-10:30. Between 200 and 300 people are served each week, and nobody is turned away. The pantry only requires that patrons fill out a one-time, single-page form upon their first visit to the pantry. In addition to operating its pantry, Loaves and Fishes has a clothes closet with free donated clothes, and it has a partnership with Yale’s medical school to make basic medical care available to its patrons.<br><br>
+              Our trip there led us to hearing compelling stories from patrons and volunteers. One patron-turned-volunteer gave us a tour of the facility and offered us the story of his relationship to the Loaves and Fishes community. The close community cultivated at Loaves and Fishes has helped to lift its patrons out of hard times and inspired a few of them to volunteer at the pantry. Now, he works at the pantry throughout the week where he can be a part of the community that got him back on his feet.<br><br>
+              Loaves & Fishes has been in operation close to 35 years. Only twice have they been forced to close due to inclement conditions. The warmth and devotion of each volunteer and organizer is central to the success of this pantry. The facility is located in the basement of the church. The walls are covered in vibrant murals and the space is very clean. The diverse group of patrons comes from all over the city. While most of the guests walk from within a one-mile radius, some take the city bus to the pantry. In special cases, those in the direct vicinity who cannot make it to the church are delivered their respective bags of food each Saturday.<br><br>
+              Food options can range broadly week-to-week, but kitchen staples such as bread, grains and canned goods are always available. They make a concerted effort to provide healthier options like vegetables, fruits and proteins. It takes approximately $1000 a week to feed an average of 250 patrons and their households. According to a patron-turned-employee, the food provided by the pantry can last its patrons the entire week. The majority of this funding comes from friends and family of the coordinators as well as local businesses.<br><br>
+              While at Loaves and Fishes, we were also able to speak with a man who joined the Loaves and Fishes community over 20 years ago after immigrating from Jamaica. He uses the service and volunteers every week. Apart from clothing and food, Loaves and Fishes a community that has forever changed him. His rocky beginnings in the US tangled him up with the wrong crowd. After he was incarcerated, AA meetings and Saturday mornings at L & F helped him get back on his feet. The supportive nature of the space kept his improvement and well being on track. Now, after 20 years, he still volunteers every Saturday with some of his closest friends and mentors—and maybe a warm cup of coffee too.
+            </p>
         </div>
 
-        <div class="mySlides3 fade">
-          <img src="v2.png" style="width:100%">
+        <div id="Sunrise" class="tabcontent">
+          <div class="slideshow-container" style="top:-24px; margin-bottom:-43px;">
+            <div class="mySlides2 fade">
+              <img src="sc1.png" style="width:100%">
+            </div>
+
+            <div class="mySlides2 fade">
+              <img src="sc2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides2 fade">
+              <img src="sc3.png" style="width:100%">
+            </div>
+
+            <div class="mySlides2 fade">
+              <img src="sc4.png" style="width:100%">
+            </div>
+
+            <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides2(-1)">&#10094;</a>
+            <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides2(1)">&#10095;</a>
+          </div>
+
+          <br><br>
+          <p style='margin-right: 0.5em; margin-bottom: 10em; margin-left: 3px;'>
+              The Sunrise Café is no ordinary soup kitchen. In fact, they don’t even serve soup. It’s a breakfast
+              establishment, with eggs, pancakes, oatmeal, and the like on the menu. And the menu,
+              presented on a white board in the middle of the Café, has choices of hot dishes for its patrons.
+              You don’t just get whatever they’re serving that day—you put in your order.<br><br>
+              John Bradley, executive director of Liberty Community Services, a 30-year- old organization
+              that’s charged itself to end homeless, says it’s a different sort of model. “We try to make it
+              slightly different from a soup kitchen, where the volunteers are in the back.” Here, volunteers
+              in aprons take orders and carry trays back and forth from the kitchen. “We try to make it more
+              like a community café. People come and place their orders, and then get served at their tables
+              by our volunteers.”<br><br>
+              Sunrise Café came to be in March 2015 after some discussions between Bradley, Ellen Daniel,
+              and other founders. They felt like there was a gap to fill. Many New Haven soup kitchens are
+              open only select days of the week, and most offer lunch or dinner. A hot breakfast was harder
+              to find.<br><br>
+              “So we said, let’s try this, do it every day, be more consistent, and really develop the breakfast
+              food options,” Bradley said.<br><br>
+              But more happens at Sunrise Café than the provision of hot breakfasts. “We’re about creating a
+              community here,” Bradley described. “People who may not seek out social services may still
+              come in for the meal, but we can engage in other ways once they’re here.” This might mean
+              helping a couple get housing, or assisting someone in traveling across the country to see his
+              family again—both of which Bradley has examples of.<br><br>
+              Scott C. first started coming to the Café for the food, but now he’s a volunteer. “Just because
+              I’m in a bad situation, and I’m homeless, doesn’t mean I can’t help out. I won’t be stagnant.”<br><br>
+              While he works on housing and makes plans to rebuild his power washing business, the
+              community at Sunrise Café keeps him in a good mindset. “Volunteering here humbles me, and
+              also puts things in perspective.”<br><br>
+              Sunrise Café is located in the ground floor of St. Paul and St. James Episcopal Church at the
+              corner of Olive and Chapel Streets, near Wooster Square. Breakfast is served each weekday from
+              7:30 to 9:30am, and no one is turned away.
+          </p>
         </div>
 
-        <div class="mySlides3 fade">
-          <img src="v5.png" style="width:100%">
-        </div>
+        <div id="Varick" class="tabcontent">
+                <div class="slideshow-container" style="top:-24px; margin-bottom:-43px;">
+            <div class="mySlides3 fade">
+              <img src="v1.png" style="width:100%">
+            </div>
 
-        <div class="mySlides3 fade">
-          <img src="v4.png" style="width:100%">
-        </div>
+            <div class="mySlides3 fade">
+              <img src="v2.png" style="width:100%">
+            </div>
 
-        <div class="mySlides3 fade">
-          <img src="v3.png" style="width:100%">
-        </div>
+            <div class="mySlides3 fade">
+              <img src="v5.png" style="width:100%">
+            </div>
 
-        <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides3(-1)">&#10094;</a>
-        <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides3(1)">&#10095;</a>
+            <div class="mySlides3 fade">
+              <img src="v4.png" style="width:100%">
+            </div>
+
+            <div class="mySlides3 fade">
+              <img src="v3.png" style="width:100%">
+            </div>
+
+            <a class="prev" style="font-size:20px; top:50%;" onclick="plusSlides3(-1)">&#10094;</a>
+            <a class="next" style="font-size:20px; top:50%;" onclick="plusSlides3(1)">&#10095;</a>
+          </div>
+
+          <br><br>
+          <p style='margin-right: 0.5em; margin-bottom: 10em; margin-left: 3px;'>
+              Varick AME Zion is located at 246 Dixwell Avenue, near the corner of Dixwell Avenue and Charles Street. This soup kitchen is open on Mondays from 5:30 to 6:30pm, with food pantry services available on the first Saturday of each month from 10:00am to 12:00pm.
+          </p>
+        </div>
       </div>
 
-      <br><br>
-      <p style='font-size:0.8em; margin-right: 4em; margin-bottom: 5em;'>
-          Varick AME Zion is located at 246 Dixwell Avenue, near the corner of Dixwell Avenue and Charles Street. This soup kitchen is open on Mondays from 5:30 to 6:30pm, with food pantry services available on the first Saturday of each month from 10:00am to 12:00pm.
-      </p>
-	  </div>
-  </div>
-
+      <div id="Info" class="navicontent">
+        <h3>How to Use Food Haven</h3> <br>
+        <p><font color="#ff0000">Food pantries</font> are marked in <font color="#ff0000">red</font>, <font color="#0b55f9">soup kitchens</font> in <font color="#0b55f9">blue</font>, and <font color="#f2c403">grocery stores</font> in <font color="#f2c403">yellow</font>.<br><br>Each marker contains a 3-digit number, representing the location's alphanumeric position by type on both the digital and physical maps. Click on a marker to reveal the location name, address, and hours (for food pantries and soup kitchens only).<br><br>To zoom or rotate the map, use the navigation controls in the bottom right corner.</p>
+      </div>
+    </div>
 
 
     <script>
@@ -386,7 +452,7 @@
      var popup = new mapboxgl.Popup({ offset: [0, -15] })
        .setLngLat(feature.geometry.coordinates)
        .setHTML('<h3 style="margin-left:0.34em;">' + feature.properties.Mark + '</h3><h3 style="margin-left:3.2em; margin-top:-1.66em;">' + feature.properties.isCalled + '</h3><p style="margin-left:3.2em;">' + feature.properties.Type + '<br>-<br>' + 
-       		feature.properties.Address1 + ',<br>' + feature.properties.Address2 + '<br>' + feature.properties.Hours + '</p>')
+          feature.properties.Address1 + ',<br>' + feature.properties.Address2 + '<br>' + feature.properties.Hours + '</p>')
        .setLngLat(feature.geometry.coordinates)
        .addTo(map);
     });
@@ -399,10 +465,13 @@
     // Sidebar controls
     document.getElementById("mySidenav").style.width = "350px";
     document.getElementById("mySidenav").style.marginLeft = "-350px";
+    document.getElementById("behindNavi").style.width = "320px";
+    document.getElementById("behindNavi").style.marginLeft = "-320px";
 
 
     function openNav() {
         document.getElementById("mySidenav").style.marginLeft = "0px";
+        document.getElementById("behindNavi").style.marginLeft = "0px";
     }
 
     function closeNav() {
@@ -411,6 +480,7 @@
         var i, tabcontent, tablinks;
 
         document.getElementById("mySidenav").style.marginLeft = "-350px";
+        document.getElementById("behindNavi").style.marginLeft = "-320px";
 
         // Get all elements with class="tabcontent" and hide them
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -426,27 +496,62 @@
     }
 
 
+    function closeNavi() {
+
+        var i, navicontent, navilinks;
+
+        closeNav();
+
+
+
+        navilinks = document.getElementsByClassName("navilinks");
+        for (i = 0; i < navilinks.length; i++) {
+            navilinks[i].className = navilinks[i].className.replace(" active", "");
+        }
+    }
+
+
+    function openNavi(evt, Name) {
+
+      var i, navicontent, navilinks;
+
+      openNav();
+
+      navicontent = document.getElementsByClassName("navicontent");
+      for (i = 0; i < navicontent.length; i++) {
+          navicontent[i].style.display = "none";
+      }
+
+      navilinks = document.getElementsByClassName("navilinks");
+      for (i = 0; i < navilinks.length; i++) {
+          navilinks[i].className = navilinks[i].className.replace(" active", "");
+      }
+
+      document.getElementById(Name).style.display = "block";
+      evt.currentTarget.className += " active";
+   }
+
+
     function openLoc(evt, Name) {
-	    // Declare all variables
-	    var i, tabcontent, tablinks;
+      // Declare all variables
+      var i, tabcontent, tablinks;
 
-	    // Get all elements with class="tabcontent" and hide them
-	    tabcontent = document.getElementsByClassName("tabcontent");
-	    for (i = 0; i < tabcontent.length; i++) {
-	        tabcontent[i].style.display = "none";
-	    }
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
 
-	    // Get all elements with class="tablinks" and remove the class "active"
-	    tablinks = document.getElementsByClassName("tablinks");
-	    for (i = 0; i < tablinks.length; i++) {
-	        tablinks[i].className = tablinks[i].className.replace(" active", "");
-	    }
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
 
-	    // Show the current tab, and add an "active" class to the button that opened the tab
-	    document.getElementById(Name).style.display = "block";
-	    evt.currentTarget.className += " active";
-
-	 }
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(Name).style.display = "block";
+      evt.currentTarget.className += " active";
+   }
 
     // Slideshow
     var slideIndex1 = 1;
